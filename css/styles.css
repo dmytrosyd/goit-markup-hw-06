@@ -572,7 +572,7 @@ subscribe-input::placeholder {
 .modal {
   width: 408px;
   height: 584px;
-  padding: 24px;
+  padding: 72px 24px 24px;
   background: #fcfcfc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;

@@ -529,7 +529,10 @@ subscribe-input::placeholder {
 }
 
 .btn-subscribe {
+  transition: background-color var(--animation-duration)
+    var(--animation-function);
   display: flex;
+  font-weight: 500;
   padding: 8px 24px;
   min-width: 165px;
   height: 40px;
@@ -585,7 +588,8 @@ subscribe-input::placeholder {
 .modal-close {
   position: absolute;
   transition: background-color var(--animation-duration)
-    var(--animation-function);
+      var(--animation-function),
+    border-color var(--animation-duration) var(--animation-function);
 
   display: flex;
   top: 24px;
@@ -661,8 +665,8 @@ form {
 }
 
 .modal-item input {
-  transition: border var(--animation-duration) var(--animation-function),
-    fill var(--animation-duration) var(--animation-function);
+  transition: border-color var(--animation-duration) var(--animation-function);
+  outline: none;
 
   width: 100%;
   min-height: 40px;
@@ -683,10 +687,12 @@ form {
 textarea:focus {
   outline: none;
   border: 1px solid var(--pressed-state);
+  border-color: var(--pressed-state);
 }
 
 .modal-item input:focus + .person-input > .input-icon {
   fill: var(--pressed-state);
+  transition: fill var(--animation-duration) var(--animation-function);
 }
 
 .person-input {
@@ -718,7 +724,7 @@ textarea:focus {
 
 textarea {
   transition: border var(--animation-duration) var(--animation-function);
-
+  display: block;
   resize: none;
   width: 100%;
   min-height: 120px;

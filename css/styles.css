@@ -723,7 +723,7 @@ textarea:focus {
 }
 
 textarea {
-  transition: border var(--animation-duration) var(--animation-function);
+  transition: border-color var(--animation-duration) var(--animation-function);
   display: block;
   resize: none;
   width: 100%;
